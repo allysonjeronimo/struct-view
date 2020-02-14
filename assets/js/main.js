@@ -3,7 +3,19 @@ state = {
     size: 10,
     dom: {
         content: document.getElementById('content')
-    }
+    },
+    colors:[
+        '#103215',
+        '#15421B', 
+        '#1A5322',
+        '#206329',
+        '#257430',
+        '#2A8436',
+        '#2F953D',
+        '#34A544',
+        '#39B54A',
+        '#4BBB5A'
+    ]
 }
 
 function random() {
@@ -64,9 +76,11 @@ function render(i, replace = false) {
 
     let filled = state.array[i] !== undefined
 
+    let background = filled ? `style='background: ${state.colors[state.array[i]]}'` : ''
+
     if (replace) {
         document.getElementById(`node-${i}`).innerHTML = `
-        <div class=${filled ? 'filled-node' : 'empty-node'}>
+        <div class=${filled ? 'filled-node' : 'empty-node'} ${background}>
             ${filled ? state.array[i] : '-'}
             </div>
         <div class='node-index'>
@@ -77,7 +91,7 @@ function render(i, replace = false) {
     else {
         state.dom.content.innerHTML += `
     <div class='node' id='node-${i}'>
-                <div class=${filled ? 'filled-node' : 'empty-node'}>
+                <div class=${filled ? 'filled-node' : 'empty-node'} ${background}>
                     ${filled ? state.array[i] : '-'}
                 </div>
                 <div class='node-index'>
