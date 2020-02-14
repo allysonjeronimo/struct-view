@@ -80,10 +80,22 @@ body {
 }
 
 .item-node {
-
+    font-size: 16px;
+    font-weight: bold;
     padding: 6px;
     color: #fff;
     background: tomato;
     margin: 2px;
     border-radius: 5px;
+}
+
+.item-node-empty {
+    font-size: 10px;
+    padding: 6px;
+    color: #fff;
+    opacity: 0.5;
+    background: none;
+    margin: 2px;
+    border-radius: 5px;
+    border: 1px solid #fff;
 }
