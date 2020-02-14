@@ -67,7 +67,7 @@ function render(i, replace = false) {
     if (replace) {
         document.getElementById(`node-${i}`).innerHTML = `
         <div class=${filled ? 'filled-node' : 'empty-node'}>
-            ${filled ? state.array[i] : '---'}
+            ${filled ? state.array[i] : '-'}
             </div>
         <div class='node-index'>
             ${i}
@@ -78,7 +78,7 @@ function render(i, replace = false) {
         state.dom.content.innerHTML += `
     <div class='node' id='node-${i}'>
                 <div class=${filled ? 'filled-node' : 'empty-node'}>
-                    ${filled ? state.array[i] : '---'}
+                    ${filled ? state.array[i] : '-'}
                 </div>
                 <div class='node-index'>
                     ${i}

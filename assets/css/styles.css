@@ -6,22 +6,35 @@
 
 body {
     color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
+    background: #555;
 }
 
 #container {
-    width: 100%;
+    width: 60%;
     min-height: 1000px;
-    background: #555;
     margin: 0 auto;
     padding: 20px;
 }
 
+#header{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
 #header h1 {
+    flex: 2;
     font-size: 2em;
     color: lightgreen;
     padding: 12px;
-    text-align: center;
+}
+
+#header i{
+    color: lightgreen;
+    flex: 0;
+    font-size: 2em;
 }
 
 #content {
@@ -30,7 +43,6 @@ body {
     padding: 20px;
     background: #222;
     min-height: 200px;
-    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
@@ -39,7 +51,6 @@ body {
 }
 
 #actions {
-    width: 60%;
     margin: 0 auto;
     display: flex;
     flex-flow: wrap;
@@ -50,6 +61,7 @@ body {
 
 .button{
     border: 2px solid #fff;
+    border-radius: 5px;
     color: #fff;
     font-size: 1em;
     background: none;
