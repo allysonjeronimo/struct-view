@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #container {
+            width: 100%;
+            min-height: 400px;
+            background: #555;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #header h1 {
+            font-size: 2em;
+            color: aquamarine;
+            padding: 12px;
+            text-align: center;
+        }
+
+        #content {
+            border: solid 2px #999;
+            border-radius: 20px;
+            padding: 20px;
+            background: #222;
+            min-height: 60%;
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            flex-flow: wrap;
+            justify-content: flex-fill;
+            align-items: center;
+        }
+
+        #actions {
+            width: 60%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .button-fill {
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 1em;
+
+            background: none;
+            padding: 6px 16px;
+            transition: all 0.3s;
+        }
+
+        .button-fill:hover {
+            border: 2px solid aquamarine;
+            color: aquamarine;
+            cursor: pointer;
+        }
+
+        .button-empty {
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 1em;
+
+            background: none;
+            padding: 6px 16px;
+            transition: all 0.3s;
+        }
+
+        .button-empty:hover {
+            border: 2px solid goldenrod;
+            color: goldenrod;
+            cursor: pointer;
+        }
+
+        .item-node {
+
+            padding: 6px;
+            color: #fff;
+            background: tomato;
+            margin: 2px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='container'>
+        <div id='header'>
+            <h1>Visual Algorithms</h1>
+        </div>
+        <div id='actions'>
+            <a class='button-fill' onclick="fill()">Fill</a>
+            <a class='button-empty' onclick="empty()">Empty</a>
+        </div>
+        <div id='content'>
+
+        </div>
+    </div>
+
+    <script>
+
+        let array = []
+        let content = document.getElementById('content')
+
+        function random(){
+            return Math.floor(Math.random()*10)
+        }
+
+        function init() {
+            for (let i = 0; i < 50; i++) {
+                array.push(random())
+            }
+        }
+
+        // function renderAll() {
+        //     for (let i = 0; i < array.length; i++) {
+        //         setTimeout(() => render(array[i]), 0 * 500000)
+        //     }
+        // }
+
+        function renderRecursive(current) {
+            if (current < array.length) {
+                render(current)
+                setTimeout(() => renderRecursive(current + 1), 100)
+            }
+            return
+        }
+
+
+        function render(i) {
+            content.innerHTML += `
+                    <div class='item-node'>
+                        ${array[i]}
+                    </div>
+                `
+        }
+
+        function empty() {
+            array = []
+            content.innerHTML = ''
+        }
+
+        function fill() {
+            init()
+            renderRecursive(0)
+        }
+
+    </script>
+</body>
+
+</html>
