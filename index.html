@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/e850e67dac.js" crossorigin="anonymous"></script>
-   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel='stylesheet' href='assets/css/styles.css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 </head>
@@ -19,17 +19,31 @@
             <h1>Visual Algorithms</h1>
         </div>
         <div id='actions'>
-            <a class='button' onclick="handleCreate()">Create</a>
-            <a class='button' onclick="handleDestroy()">Destroy</a>
-            <a class='button' onclick="handleFill()">Fill</a>
-            <a class='button' onclick="handleEmpty()">Empty</a>
+            <a id='btn-create' class='btn' onclick="handleCreate()">Create</a>
+            <a id='btn-destroy' class='btn' onclick="handleDestroy()">Destroy</a>
+            <a class='btn-disabled btn-operations' onclick="handleFill()">Fill</a>
+            <a class='btn-disabled btn-operations' onclick="handleEmpty()">Empty</a>
         </div>
         <div id='content'>
 
         </div>
     </div>
 
-    <script src='assets/js/main.js'>
+    <script src='assets/js/main.js'></script>
+
+    <script>
+
+        // jQuery
+
+        $("#btn-create").click(function () {
+            $(".btn-operations").addClass('btn')
+            $(".btn-operations").removeClass('btn-disabled')
+        });
+
+        $("#btn-destroy").click(function () {
+            $(".btn-operations").addClass('btn-disabled')
+            $(".btn-operations").removeClass('btn')    
+        });
     </script>
 </body>
 

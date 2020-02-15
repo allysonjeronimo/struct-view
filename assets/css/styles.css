@@ -59,24 +59,38 @@ body {
     padding: 20px;
 }
 
-.button{
+.btn{
     border: 2px solid #fff;
     border-radius: 5px;
     color: #fff;
     font-size: 1em;
     background: none;
     padding: 6px 16px;
-    transition: all 0.3s;
+    transition: all 0.5s;
     margin: 10px 20px;
     flex: 1;
     text-align: center;
 }
 
-.button:hover {
+.btn-disabled{
+    border: 2px solid #777;
+    border-radius: 5px;
+    color: #777;
+    font-size: 1em;
+    background: none;
+    padding: 6px 16px;
+    transition: all 0.5s;
+    margin: 10px 20px;
+    flex: 1;
+    text-align: center;
+}
+
+.btn:hover {
     border: 2px solid lightgreen;
     color: lightgreen;
     cursor: pointer;
 }
+
 
 .node{
     display: flex;
