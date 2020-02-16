@@ -78,9 +78,12 @@ function render(i, replace = false) {
 
     let background = filled ? `style='background: ${state.colors[state.array[i]]}'` : ''
 
+    let classes = filled ? 'filled-node current-node' : 'empty-node current-node'
+
     if (replace) {
+        // filling in array
         document.getElementById(`node-${i}`).innerHTML = `
-        <div class=${filled ? 'filled-node' : 'empty-node'} ${background}>
+        <div class="${classes}" ${background}>
             ${filled ? state.array[i] : '-'}
             </div>
         <div class='node-index'>
@@ -89,9 +92,10 @@ function render(i, replace = false) {
         `
     }
     else {
+        // creating a new array
         state.dom.content.innerHTML += `
     <div class='node' id='node-${i}'>
-                <div class=${filled ? 'filled-node' : 'empty-node'} ${background}>
+                <div class=${classes} ${background}>
                     ${filled ? state.array[i] : '-'}
                 </div>
                 <div class='node-index'>
