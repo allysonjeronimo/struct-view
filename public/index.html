@@ -7,7 +7,7 @@
     <title>Document</title>
     <script src="https://kit.fontawesome.com/e850e67dac.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel='stylesheet' href='assets/css/styles.css'>
+    <link rel='stylesheet' href='css/styles.css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 </head>
 
@@ -19,17 +19,29 @@
             <h1>Visual Algorithms</h1>
         </div>
         <div id='actions'>
-            <a id='btn-create' class='btn' onclick="handleCreate()">Create</a>
-            <a id='btn-destroy' class='btn' onclick="handleDestroy()">Destroy</a>
-            <a class='btn-disabled btn-operations' onclick="handleFill()">Fill</a>
-            <a class='btn-disabled btn-operations' onclick="handleEmpty()">Empty</a>
+            <a id='btn-create' class='btn'>Create</a>
+            <a id='btn-destroy' class='btn'>Destroy</a>
+            <a id='btn-fill' class='btn-disabled btn-operations'>Fill</a>
+            <a id='btn-empty' class='btn-disabled btn-operations'>Empty</a>
         </div>
         <div id='content'>
 
         </div>
     </div>
 
-    <script src='assets/js/main.js'></script>
+    <script type="module">
+
+        import createDataStructure from './data-structure.js'
+
+        const dataStructure = createDataStructure()
+
+        document.querySelector('#btn-create').addEventListener('click', dataStructure.create)
+        document.querySelector('#btn-destroy').addEventListener('click', dataStructure.destroy)
+        document.querySelector('#btn-fill').addEventListener('click', dataStructure.fill)
+        document.querySelector('#btn-empty').addEventListener('click', dataStructure.empty)
+
+    </script>
+
 
     <script>
 
@@ -42,7 +54,7 @@
 
         $("#btn-destroy").click(function () {
             $(".btn-operations").addClass('btn-disabled')
-            $(".btn-operations").removeClass('btn')    
+            $(".btn-operations").removeClass('btn')
         });
     </script>
 </body>
