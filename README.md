@@ -1,4 +1,4 @@
-# visual-algorithms
+# struct-view
 
 Projeto para visualização de algoritmos de estrutura de dados.
 
