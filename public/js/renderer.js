@@ -30,8 +30,6 @@ export default function createRenderer() {
 
         let classes = filled ? 'filled-node' : 'empty-node'
 
-        console.log(state.getRendererState())
-
         if (replace) {
             // filling or emptying array
             document.getElementById(`node-${i}`).innerHTML = `
