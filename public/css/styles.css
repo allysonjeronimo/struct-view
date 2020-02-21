@@ -40,8 +40,7 @@ body {
 }
 
  #footer a{
-    margin: 1% 0;
-    padding: 1%;
+    padding: 12px;
     text-align: center;
     flex: 1;
 } 
@@ -56,7 +55,6 @@ body {
 #social i{
     color: var(--color-gray);
     font-size: 2em;
-    margin: 1% 0;
     transition: all 0.3s;
 } 
 
