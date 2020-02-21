@@ -4,7 +4,7 @@ const state = createState()
 export default function createRenderer() {
 
     function renderRecursive(current) {
-    
+
         if (current < state.getDataStructureState().size) {
             render(current)
             setTimeout(() => renderRecursive(current + 1), state.getDataStructureState().delay)
@@ -17,7 +17,6 @@ export default function createRenderer() {
     }
 
     function setCursor(i) {
-        // console.log('setCursor() - ' + i)
         if (i >= 0 && i < state.getDataStructureState().size) {
             let nodeElement = document.getElementById(`content-node-${i}`)
             nodeElement.classList.add('cursor-border')
@@ -32,11 +31,9 @@ export default function createRenderer() {
 
         let classes = filled ? 'filled-node' : 'empty-node'
 
-        console.log(classes)
-
         let contentNode = ''
 
-        if(state.getRendererState().node.showNumbers){
+        if (state.getRendererState().node.showNumbers) {
             contentNode = filled ? state.getDataStructureState().array[i] : '-'
         }
 

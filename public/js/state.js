@@ -1,12 +1,13 @@
 let state = {
     dataStructure: {
         array: [],
-        size: 100,
+        size: 50,
         delay: 50
     },
     renderer: {
-        node:{
-            showNumbers : true
+        node: {
+            showNumbers: true,
+            showIndex: true
         },
         dom: {
             content: document.getElementById('content')

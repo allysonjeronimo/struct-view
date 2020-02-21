@@ -19,7 +19,6 @@ export default function createDataStructure() {
 
     function remove(current, deleteNode) {
         if (current >= 0) {
-
             if (deleteNode) {
                 delete state.getDataStructureState().array[current]
                 renderer.renderRemove(current)
@@ -35,9 +34,12 @@ export default function createDataStructure() {
     }
 
     function create() {
+        
         const size = state.getDataStructureState().size
         state.getDataStructureState().array = new Array(size)
+
         renderer.create()
+
     }
 
     function destroy() {

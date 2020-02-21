@@ -134,8 +134,8 @@ body {
     padding: 6px;
     color: #282a36;
     border-radius: 5px;
-    box-shadow: 0px 0px 5px #282a36;
-    border: 1.2px solid #282a36;
+    box-shadow: 0px 0px 5px #8be9fd;
+    border: 2px solid #00000000;
 }
 
 .empty-node{
@@ -150,13 +150,19 @@ body {
     opacity: 0.5;
     background: none;
     border-radius: 5px;
-    border: 1.2px solid #6272a4	;
-    box-shadow: 0px 0px 5px #44475a;
+    border: 2px solid #6272a4	;
+    box-shadow: 0px 0px 5px #6272a4;
 }
 
 .cursor-border, .empty-node:hover, .filled-node:hover{
-    border: 1.2px solid #8be9fd;
-    box-shadow: 0px 0px 5px #8be9fd;
+    border: 2px solid #50fa7b;
+    box-shadow: 0px 0px 5px #50fa7b;
+    cursor: pointer;
+}
+
+.cursor-border-red{
+    border: 2px solid #ff5555;
+    box-shadow: 0px 0px 5px #ff5555;
     cursor: pointer;
 }
 
