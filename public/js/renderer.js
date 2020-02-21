@@ -9,7 +9,7 @@ export default function createRenderer() {
     function renderRecursive(current) {
         if (current < state.getDataStructureState().size) {
             render(current)
-            setTimeout(() => renderRecursive(current + 1), state.getDataStructureState().delay)
+            setTimeout(() => renderRecursive(current + 1), state.getDataStructureState().delayStruct)
         }
         return
     }

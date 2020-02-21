@@ -15,7 +15,7 @@ export default function createDataStructure() {
         if (current < state.getDataStructureState().array.length) {
             state.getDataStructureState().array[current] = util.random()
             renderer.render(current, true)
-            setTimeout(() => insert(current + 1), state.getDataStructureState().delay)
+            setTimeout(() => insert(current + 1), state.getDataStructureState().delayData)
         }
         return
     }
@@ -34,7 +34,7 @@ export default function createDataStructure() {
                 renderer.render(current, true)
             }
 
-            setTimeout(() => remove(current - 1, deleteNode), state.getDataStructureState().delay)
+            setTimeout(() => remove(current - 1, deleteNode), state.getDataStructureState().delayStruct)
         }
         return
     }
