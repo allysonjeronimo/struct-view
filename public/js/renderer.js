@@ -29,6 +29,8 @@ export default function createRenderer() {
 
         let filled = state.getDataStructureState().array[i] !== undefined
 
+        let index = state.getRendererState().node.showIndex ? i : ''
+
         let background = filled ? `style='background: ${state.getRendererState().colors[state.getDataStructureState().array[i]]}'` : ''
 
         let classes = filled ? 'filled-node' : 'empty-node'
@@ -46,7 +48,7 @@ export default function createRenderer() {
                 ${contentNode}
             </div>
             <div class='node-index'>
-                ${i}
+                ${index}
             </div>
             `
         }
@@ -58,7 +60,7 @@ export default function createRenderer() {
                         ${contentNode}
                     </div>
                     <div class='node-index'>
-                        ${i}
+                        ${index}
                     </div>
                 </div>
         `
