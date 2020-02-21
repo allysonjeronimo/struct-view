@@ -3,7 +3,7 @@ let state = {
         array: [],
         size: 100,
         delayStruct: 40,
-        delayData: 100
+        delayData: 40
     },
     renderer: {
         node: {

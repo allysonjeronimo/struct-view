@@ -7,6 +7,7 @@
     --color-primary-dark: #6272a4; 
     --color-white: #fff;
     --color-purple: #bd93f9; 
+    --color-pink: #ff79c6;
     --color-gray: #777c99;
     --color-dark-gray: #333544;
 }
@@ -167,10 +168,10 @@ body {
 }
 
 .btn-cancel:hover {
-    border: 2px solid var(--color-danger);
-    color: var(--color-danger);
+    border: 2px solid var(--color-pink);
+    color: var(--color-pink);
     cursor: pointer;
-    box-shadow: 0 0 5px var(--color-danger);
+    box-shadow: 0 0 5px var(--color-pink);
 }
 
 
@@ -219,8 +220,8 @@ body {
 }
 
 .cursor-border-cancel{
-    border: 2px solid var(--color-danger);
-    box-shadow: 0px 0px 5px var(--color-danger);
+    border: 2px solid var(--color-pink);
+    box-shadow: 0px 0px 5px var(--color-pink);
     cursor: pointer;
 }
 

@@ -26,6 +26,7 @@
             <a id='btn-destroy' class='btn-cancel'>Destroy</a>
             <a id='btn-fill' class='btn-disabled'>Fill</a>
             <a id='btn-empty' class='btn-disabled'>Empty</a>
+            <a id='btn-algo' class='btn-disabled'>Algorithms</a>
         </div>
         <div id='content'>
            
@@ -59,8 +60,10 @@
         $("#btn-create").click(function () {
             $('#btn-fill').removeClass('btn-disabled')
             $('#btn-empty').removeClass('btn-disabled')
+            //$('#btn-algo').removeClass('btn-disabled')
             $('#btn-fill').addClass('btn')
             $('#btn-empty').addClass('btn-cancel')
+         //   $('#btn-algo').addClass('btn')
         });
 
         $("#btn-destroy").click(function () {
@@ -68,6 +71,7 @@
             $('#btn-empty').removeClass('btn-cancel')
             $('#btn-fill').addClass('btn-disabled')
             $('#btn-empty').addClass('btn-disabled')
+           // $('#btn-algo').addClass('btn-disabled')
         });
     </script>
 </body>
