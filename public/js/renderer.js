@@ -3,8 +3,10 @@ const state = createState()
 
 export default function createRenderer() {
 
-    function renderRecursive(current) {
+    const CURSOR_GREEN = 0
+    const CURSOR_RED = 1
 
+    function renderRecursive(current) {
         if (current < state.getDataStructureState().size) {
             render(current)
             setTimeout(() => renderRecursive(current + 1), state.getDataStructureState().delay)
@@ -16,10 +18,10 @@ export default function createRenderer() {
         document.getElementById(`node-${i}`).remove()
     }
 
-    function setCursor(i) {
+    function setCursor(i, type = CURSOR_GREEN) {
         if (i >= 0 && i < state.getDataStructureState().size) {
             let nodeElement = document.getElementById(`content-node-${i}`)
-            nodeElement.classList.add('cursor-border')
+            nodeElement.classList.add(type === CURSOR_GREEN ? 'cursor-border' : 'cursor-border-pink')
         }
     }
 
@@ -47,7 +49,6 @@ export default function createRenderer() {
                 ${i}
             </div>
             `
-            setCursor(filled ? i + 1 : i - 1)
         }
         else {
             // creating a new array

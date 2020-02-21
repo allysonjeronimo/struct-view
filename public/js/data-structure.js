@@ -9,6 +9,9 @@ const util = createUtil()
 export default function createDataStructure() {
 
     function insert(current) {
+
+        renderer.setCursor(current+1, 0)
+
         if (current < state.getDataStructureState().array.length) {
             state.getDataStructureState().array[current] = util.random()
             renderer.render(current, true)
@@ -18,6 +21,9 @@ export default function createDataStructure() {
     }
 
     function remove(current, deleteNode) {
+
+        renderer.setCursor(current-1, 1)
+
         if (current >= 0) {
             if (deleteNode) {
                 delete state.getDataStructureState().array[current]
@@ -47,12 +53,10 @@ export default function createDataStructure() {
     }
 
     function fill() {
-        renderer.setCursor(0)
         insert(0)
     }
 
     function empty() {
-        renderer.setCursor(state.getDataStructureState().array.length - 1)
         remove(state.getDataStructureState().array.length - 1)
     }
 

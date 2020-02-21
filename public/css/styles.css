@@ -160,9 +160,9 @@ body {
     cursor: pointer;
 }
 
-.cursor-border-red{
-    border: 2px solid #ff5555;
-    box-shadow: 0px 0px 5px #ff5555;
+.cursor-border-pink{
+    border: 2px solid #ff79c6;
+    box-shadow: 0px 0px 5px #ff79c6;
     cursor: pointer;
 }
 
