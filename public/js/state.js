@@ -2,7 +2,7 @@ let state = {
     dataStructure: {
         array: [],
         size: 100,
-        delay: 100
+        delay: 50
     },
     renderer: {
         dom: {

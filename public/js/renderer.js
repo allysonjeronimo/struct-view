@@ -17,7 +17,8 @@ export default function createRenderer() {
     }
 
     function setCursor(i) {
-        if (i >= 0 && i < state.getDataStructureState().array.length) {
+        console.log('setCursor() - ' + i)
+        if (i >= 0 && i < state.getDataStructureState().size) {
             document.getElementById(`content-node-${i}`).classList.add('current-node')
         }
     }
