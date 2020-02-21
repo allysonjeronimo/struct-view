@@ -8,22 +8,23 @@ let state = {
     renderer: {
         node: {
             showNumbers: true,
-            showIndex: true
+            showIndex: true,
+            filledColor: '#8be9fd'
         },
         dom: {
             content: document.getElementById('content')
         },
-        colors: [
-            '#8be9fd66',
-            '#8be9fd77',
-            '#8be9fd88',
-            '#8be9fd99',
-            '#8be9fdaa',
-            '#8be9fdbb',
-            '#8be9fdcc',
-            '#8be9fddd',
-            '#8be9fdee',
-            '#8be9fdff'
+        alphaValues: [
+            '66',
+            '77',
+            '88',
+            '99',
+            'aa',
+            'bb',
+            'cc',
+            'dd',
+            'ee',
+            'ff'
         ]
     }
 }

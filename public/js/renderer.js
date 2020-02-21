@@ -31,7 +31,9 @@ export default function createRenderer() {
 
         let index = state.getRendererState().node.showIndex ? i : ''
 
-        let background = filled ? `style='background: ${state.getRendererState().colors[state.getDataStructureState().array[i]]}'` : ''
+        let color = state.getRendererState().node.filledColor + state.getRendererState().alphaValues[state.getDataStructureState().array[i]]
+
+        let background = filled ? `style='background: ${color}'` : ''
 
         let classes = filled ? 'filled-node' : 'empty-node'
 
