@@ -23,9 +23,9 @@
         </div>
         <div id='actions'>
             <a id='btn-create' class='btn'>Create</a>
-            <a id='btn-destroy' class='btn'>Destroy</a>
-            <a id='btn-fill' class='btn-disabled btn-operations'>Fill</a>
-            <a id='btn-empty' class='btn-disabled btn-operations'>Empty</a>
+            <a id='btn-destroy' class='btn-cancel'>Destroy</a>
+            <a id='btn-fill' class='btn-disabled'>Fill</a>
+            <a id='btn-empty' class='btn-disabled'>Empty</a>
         </div>
         <div id='content'>
 
@@ -47,13 +47,17 @@
 
     <script>
         $("#btn-create").click(function () {
-            $(".btn-operations").addClass('btn')
-            $(".btn-operations").removeClass('btn-disabled')
+            $('#btn-fill').removeClass('btn-disabled')
+            $('#btn-empty').removeClass('btn-disabled')
+            $('#btn-fill').addClass('btn')
+            $('#btn-empty').addClass('btn-cancel')
         });
 
         $("#btn-destroy").click(function () {
-            $(".btn-operations").addClass('btn-disabled')
-            $(".btn-operations").removeClass('btn')
+            $('#btn-fill').removeClass('btn')
+            $('#btn-empty').removeClass('btn-cancel')
+            $('#btn-fill').addClass('btn-disabled')
+            $('#btn-empty').addClass('btn-disabled')
         });
     </script>
 </body>

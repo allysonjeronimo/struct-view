@@ -82,7 +82,7 @@ body {
     padding: 20px;
 }
 
-.btn{
+.btn, .btn-cancel{
     border: 2px solid #fff;
     border-radius: 5px;
     color: #fff;
@@ -113,6 +113,13 @@ body {
     color: #50fa7b;
     cursor: pointer;
     box-shadow: 0 0 5px #50fa7b;
+}
+
+.btn-cancel:hover {
+    border: 2px solid #ff5555;
+    color: #ff5555;
+    cursor: pointer;
+    box-shadow: 0 0 5px #ff5555;
 }
 
 
@@ -160,9 +167,9 @@ body {
     cursor: pointer;
 }
 
-.cursor-border-pink{
-    border: 2px solid #ff79c6;
-    box-shadow: 0px 0px 5px #ff79c6;
+.cursor-border-cancel{
+    border: 2px solid #ff5555;
+    box-shadow: 0px 0px 5px #ff5555;
     cursor: pointer;
 }
 

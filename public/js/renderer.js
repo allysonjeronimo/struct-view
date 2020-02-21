@@ -21,7 +21,7 @@ export default function createRenderer() {
     function setCursor(i, type = CURSOR_GREEN) {
         if (i >= 0 && i < state.getDataStructureState().size) {
             let nodeElement = document.getElementById(`content-node-${i}`)
-            nodeElement.classList.add(type === CURSOR_GREEN ? 'cursor-border' : 'cursor-border-pink')
+            nodeElement.classList.add(type === CURSOR_GREEN ? 'cursor-border' : 'cursor-border-cancel')
         }
     }
 
