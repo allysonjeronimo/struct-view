@@ -17,9 +17,10 @@ export default function createRenderer() {
     }
 
     function setCursor(i) {
-        console.log('setCursor() - ' + i)
+        // console.log('setCursor() - ' + i)
         if (i >= 0 && i < state.getDataStructureState().size) {
-            document.getElementById(`content-node-${i}`).classList.add('current-node')
+            let nodeElement = document.getElementById(`content-node-${i}`)
+            nodeElement.classList.add('cursor-border')
         }
     }
 
@@ -31,11 +32,19 @@ export default function createRenderer() {
 
         let classes = filled ? 'filled-node' : 'empty-node'
 
+        console.log(classes)
+
+        let contentNode = ''
+
+        if(state.getRendererState().node.showNumbers){
+            contentNode = filled ? state.getDataStructureState().array[i] : '-'
+        }
+
         if (replace) {
             // filling or emptying array
             document.getElementById(`node-${i}`).innerHTML = `
-            <div id="content-node-${i}" class="${classes}" ${background}>
-                ${filled ? state.getDataStructureState().array[i] : '-'}
+            <div id="content-node-${i}" class=${classes} ${background}>
+                ${contentNode}
             </div>
             <div class='node-index'>
                 ${i}
@@ -48,7 +57,7 @@ export default function createRenderer() {
             state.getRendererState().dom.content.innerHTML += `
             <div class='node' id='node-${i}'>
                     <div id='content-node-${i}' class=${classes} ${background}>
-                        ${filled ? state.getDataStructureState().array[i] : '-'}
+                        ${contentNode}
                     </div>
                     <div class='node-index'>
                         ${i}

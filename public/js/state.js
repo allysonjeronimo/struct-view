@@ -5,20 +5,23 @@ let state = {
         delay: 50
     },
     renderer: {
+        node:{
+            showNumbers : true
+        },
         dom: {
             content: document.getElementById('content')
         },
         colors: [
-            '#103215',
-            '#15421B',
-            '#1A5322',
-            '#206329',
-            '#257430',
-            '#2A8436',
-            '#2F953D',
-            '#34A544',
-            '#39B54A',
-            '#4BBB5A'
+            '#8be9fd66',
+            '#8be9fd77',
+            '#8be9fd88',
+            '#8be9fd99',
+            '#8be9fdaa',
+            '#8be9fdbb',
+            '#8be9fdcc',
+            '#8be9fddd',
+            '#8be9fdee',
+            '#8be9fdff'
         ]
     }
 }
