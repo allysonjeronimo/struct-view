@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/e850e67dac.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Struct-View</title>
     <link rel='stylesheet' href='css/styles.css'>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e850e67dac.js" crossorigin="anonymous"></script>
 </head>
-
-
 <body>
     <div id='container'>
         <div id='header'>
@@ -29,19 +29,19 @@
             <a id='btn-algo' class='btn-disabled'>Algorithms</a>
         </div>
         <div id='content'>
-           
+
         </div>
         <div id='footer'>
             <div id='social'>
                 <a href='https://github.com/allysonjeronimo/struct-view' target='_blank'>
                     <i class="fab fa-github-alt"></i>
                 </a>
-            </div>   
+            </div>
             <div id='dev-name'>by allyson.jeronimo</div>
         </div>
     </div>
 
-    
+
 
     <script type="module">
 
@@ -63,7 +63,7 @@
             //$('#btn-algo').removeClass('btn-disabled')
             $('#btn-fill').addClass('btn')
             $('#btn-empty').addClass('btn-cancel')
-         //   $('#btn-algo').addClass('btn')
+            //   $('#btn-algo').addClass('btn')
         });
 
         $("#btn-destroy").click(function () {
@@ -71,7 +71,7 @@
             $('#btn-empty').removeClass('btn-cancel')
             $('#btn-fill').addClass('btn-disabled')
             $('#btn-empty').addClass('btn-disabled')
-           // $('#btn-algo').addClass('btn-disabled')
+            // $('#btn-algo').addClass('btn-disabled')
         });
     </script>
 </body>

@@ -1,0 +1,21 @@
+{
+  "name": "struct-view",
+  "version": "1.0.0",
+  "description": "Projeto para visualização de algoritmos de estrutura de dados.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allysonjeronimo/struct-view.git"
+  },
+  "author": "Allyson Jeronimo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/allysonjeronimo/struct-view/issues"
+  },
+  "homepage": "https://github.com/allysonjeronimo/struct-view#readme",
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {}
+}
